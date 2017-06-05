@@ -1,6 +1,18 @@
 (function () {
-  function RoomCtrl(Room) {
-    this.rooms = Room.all;
+  function RoomCtrl($scope, Room) {
+    $scope.rooms = Room;
+    $scope.currentRoom = null;
+
+
+    //$scope.rooms = ref;
+
+    $scope.addRoom = function() {
+      $scope.rooms.$add ({
+        name: $scope.newRoomName
+      });
+    }
+    //this.rooms = Room.all;
+    return $scope.rooms;
   }
 
   angular
