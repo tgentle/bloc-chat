@@ -1,9 +1,9 @@
-<h1>Welcome to Bloc Chat!</h1>
-<div>
-  <!-- <h3 { room.$id }} </h3>
-  //  <p ng-repeat="room in home.rooms"> {{ room.$value }} </p> -->
-  <section class="hero-content">
-    <h1 class="hero-title" ui-sref="rooms"> {{ home.heroTitle }} </h1>
-  </section>
-
+<div class="room-nav">
+  <h1>Welcome to Bloc Chat!</h1>
+  <span class="new-room-button" type="button" ng-click="home.addRoom()">Create Room</span>
+<div ng-repeat="room in home.rooms">
+    <h3> {{ room.$id }}</h3>
+    <p> {{ room.$value }} </p>
+   <p class="room-name" ng-click="home.setCurrentRoom(room)"> {{ room.name }} </p>
   </div>
+</div>

@@ -10,7 +10,7 @@
       rooms.$add(room);
     };
 
-    return Room;
+    return rooms;
   }
 
 
