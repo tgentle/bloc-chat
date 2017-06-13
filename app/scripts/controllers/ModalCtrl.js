@@ -5,7 +5,7 @@
       };
 
       this.submit = function () {
-        Room.add(this.newRoom);
+        
         $uibmodalInstance.close();
       };
     }

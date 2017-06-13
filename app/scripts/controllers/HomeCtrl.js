@@ -1,17 +1,12 @@
 (function () {
-  function HomeCtrl(Room, $uibModal){
-    console.log(Room);
-      this.rooms = Room;
+  function HomeCtrl(Room){
+      this.rooms = Room.all;
       this.addRoom = function() {
-        $uibModal.open({
-          templateUrl: '/templates/modal.html',
-          size: 'sm',
-          controller: 'ModalCtrl as modal'
-        });
-      }
+        Room.add(this.newRoom);
+      };
     }
 
     angular
       .module('blocChat')
-      .controller('HomeCtrl', ['Room', '$uibModal', HomeCtrl])
+      .controller('HomeCtrl', ['Room', HomeCtrl])
 })();

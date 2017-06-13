@@ -11,7 +11,7 @@
         name: $scope.newRoomName
       });
     }
-    //this.rooms = Room.all;
+    this.rooms = Room;
     return $scope.rooms;
   }
 

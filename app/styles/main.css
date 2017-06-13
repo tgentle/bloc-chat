@@ -1,7 +1,33 @@
 body {
   background-color: teal;
-  font-family: 'Open Sans';
+  font-family: Arial;
   color: white;
   min-height: 100%;
   padding-bottom: 200px;
+  padding-right: 50%;
+
   }
+
+  .room-nav {
+    color: white;
+    padding-left: 3%;
+    border: 5px inset #095b57;
+    text-align: center;
+
+  }
+
+  .room-button {
+    color: #f4ce42;
+    border: 8px dotted #095b57;
+    padding: 8px;
+    text-align: center;
+
+  }
+
+.room-name {
+  color: #dff441;
+  border: 3px solid #095b57;
+  padding: 5px;
+
+
+}
