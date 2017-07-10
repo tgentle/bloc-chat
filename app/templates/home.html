@@ -1,5 +1,5 @@
-<div class="room-nav">
   <section class="side-bar">
+    <div class="room-nav">
     <h1>Welcome to Bloc Chat!</h1>
   </div><br><br>
   <!-- <h5 class="modal-prompt">Enter Room Name</h5> -->
@@ -10,7 +10,7 @@
 
   <div ng-repeat="room in home.rooms">
     <h3> {{ room.$index }}</h3>
-    <p class="room-name" ng-click="home.setCurrentRoom(room)"> {{ room.name }} </p>
+    <p class="room-name" ng-click="home.setRoom(room)"> {{ room.name }} </p>
   </div>
 
   <div class="chat-section">
@@ -21,4 +21,7 @@
       <p>{{ message.content }}</p>
       <p>{{ message.sentAt }}</p>
     </div>
+
+    <input type="text" placeholder="type message"ng-model="home.newMessage.content"></input>
+    <button ng-click="home.sendMessage()">Send</button>
   </section>
