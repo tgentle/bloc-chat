@@ -19,7 +19,7 @@
     <div ng-repeat="message in home.currentMessages">
       <p>{{ message.username }}</p>
       <p>{{ message.content }}</p>
-      <p>{{ message.sentAt }}</p>
+      <p>{{ message.sentAt | date : "shortTime" }}</p>
     </div>
 
     <input type="text" placeholder="type message"ng-model="home.newMessage.content"></input>

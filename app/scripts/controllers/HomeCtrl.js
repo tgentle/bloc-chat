@@ -1,5 +1,5 @@
 (function () {
-  function HomeCtrl(Message, Room){
+  function HomeCtrl(Message, Room, $cookies){
     this.rooms = Room.all;
     this.addRoom = function() {
       Room.add(this.newRoom);
@@ -11,12 +11,13 @@
     };
 
     this.sendMessage = function() {
-      this.newMessage.roomId = this.currentRoom.$id
+      this.newMessage.roomId = this.currentRoom.$id;
+      this.newMessage.username = $cookies.get('blocChatCurrentUser');
       Message.send(this.newMessage);
     };
   }
 
   angular
   .module('blocChat')
-  .controller('HomeCtrl', ['Message', 'Room', HomeCtrl])
+  .controller('HomeCtrl', ['Message', 'Room', '$cookies', HomeCtrl])
 })();
